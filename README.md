@@ -1,9 +1,9 @@
 # BeerHub
-This is my first 'major' side project using Vue.js and Firebase. I ope op like it :)
+This is my first 'major' side project using Vue.js and Firebase. I hope you like it :)
 
 ## Live Demo
 
-The Live demo ofr the application [can be found here](https://meal-prep-9b30a.firebaseapp.com/).
+The Live demo for the application can be [viewed here](https://meal-prep-9b30a.firebaseapp.com/).
 ## Technology Used
 
 * Vue.js

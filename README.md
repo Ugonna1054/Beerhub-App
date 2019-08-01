@@ -1,4 +1,4 @@
-BeerHub
+# BeerHub
 
 ## Project setup
 ```

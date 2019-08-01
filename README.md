@@ -3,7 +3,7 @@ This is my first 'major' side project using Vue.js and Firebase. I hope you like
 
 ## Live Demo
 
-The Live demo for the application can be [viewed here](https://meal-prep-9b30a.firebaseapp.com/).
+The Live demo for the application can be [viewed here](https://beerhub-a5842.firebaseapp.com/).
 ## Technology Used
 
 * Vue.js

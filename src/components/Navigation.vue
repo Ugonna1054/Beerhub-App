@@ -1,5 +1,5 @@
 <template>
-    <div class='nav'>
+    <div class='nav mb-5'>
       <mdb-navbar id="main-navbar" dark position="top"  scrolling :scrollingOffset="20" class="navbar">
           <mdb-navbar-brand waves class="font-weight-bold" to ='/home'>
             <span>BEER HUB</span>

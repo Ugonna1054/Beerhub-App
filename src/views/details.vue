@@ -5,7 +5,7 @@
        <div class="btn bg-info text-white mb-3"  @click="clearDetails"><span class="font-weight-bold btnn px-3"> Back</span></div>
     <mdb-row>
         
-        <mdb-col class="col-md-10" >
+        <mdb-col class="col-md-10 col-sm-12 col-6" >
 		<h4 class="text-center font-weight-bold mb-3">{{beerDetails.name}}</h4>
                 <section>
                     <mdb-tbl bordered striped>
@@ -122,9 +122,9 @@
 
         <mdb-col class="col-md-2 col-12 mb-3">
                 
-                <img :src="beerDetails.image_url" class="imgg-fluid mt-5 mx-5" alt="Card image cap"> 
-                <img :src="beerDetails.image_url" class="imgg-fluid mt-5 mx-5" alt="Card image cap"> 
-                <img :src="beerDetails.image_url" class="imgg-fluid mt-5 mx-5" alt="Card image cap"> 
+                <img :src="beerDetails.image_url" class="imgg-fluid mt-5 mx-md-0 mx-lg-3 mx-xl-5 ml-5 " alt="Card image cap"> 
+                <img :src="beerDetails.image_url" class="imgg-fluid mt-5 mx-md-0 mx-lg-3 mx-xl-5 ml-5" alt="Card image cap"> 
+                <img :src="beerDetails.image_url" class="imgg-fluid mt-5 mx-md-0 mx-lg-3 mx-xl-5 ml-5" alt="Card image cap"> 
                
         </mdb-col>
 	</mdb-row>

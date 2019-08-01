@@ -10,7 +10,7 @@
 
 
    <div class="float-right">
-      <a href="#!" class="text-white"> See code on  Github <i class="fab fa-github"></i></a>
+      <a href="https://github.com/Ugonna1054/Beerhub-App" class="text-white"> See code on  Github <i class="fab fa-github"></i></a>
    </div>
  </mdb-navbar>
 </div>

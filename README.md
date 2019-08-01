@@ -1,4 +1,4 @@
-# testapp
+BeerHub
 
 ## Project setup
 ```

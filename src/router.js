@@ -6,6 +6,7 @@ import home from "@/views/home.vue";
 import favourites from "@/views/favourites.vue";
 import details from "@/views/details.vue";
 
+
 Vue.use(Router);
 
 const router = new Router({
@@ -20,8 +21,9 @@ const router = new Router({
     {
       path: "/signin",
       name: "signin",
-      component: signin
+      component: signin,
     },
+
     {
       path: "/signup",
       name: "signup",
@@ -42,21 +44,21 @@ const router = new Router({
       path: "/details",
       name: "details",
       component: details
-    }
+    },
   ]
 });
 
 // router.beforeEach((to, from, next) => {
 //   if (to.matched.some(record => record.meta.authRequired)) {
-//     if (!store.state.isAuthenticated) {
-//      next({
-//         path: "/signin"
-//       });
-//     } else {
-//       next();
-//     }
+//       if (!store.state.isAuthenticated) {
+//           next({
+//               path: '/signup'
+//           });
+//       } else {
+//           next();
+//       }
 //   } else {
-//     next();
+//       next();
 //   }
 // });
 

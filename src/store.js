@@ -15,7 +15,9 @@ export default new Vuex.Store({
     name: null,
     user: null,
     favorites: [],
-    beerDetails: null
+    beerDetails: null,
+    isEmailRegistered : false,
+    isPasswordCorrect:false
   },
   mutations: {
     setBeers(state, payload) {
@@ -35,6 +37,12 @@ export default new Vuex.Store({
     },
     setBeerDetails(state, payload) {
       state.beerDetails = payload;
+    },
+    setIsEmailRegistered(state, payload) {
+      state.isEmailRegistered = payload;
+    },
+    setIsPasswordCorrect(state, payload) {
+      state.isPasswordCorrect = payload;
     }
   },
   actions: {
@@ -79,6 +87,9 @@ export default new Vuex.Store({
           commit("setIsAuthenticated", false);
           commit("setName", "");
           console.log(err);
+          if (err.code=="auth/email-already-in-use") {
+            commit('setIsEmailRegistered', true)
+          }
         });
     },
 
@@ -95,10 +106,19 @@ export default new Vuex.Store({
           console.log(state.user);
         })
         .catch(err => {
-          console.log(err);
           commit("setIsAuthenticated", false);
           commit("setName", "");
           commit("setUser", "");
+          console.log(err.code);
+          if (err.code=='auth/user-not-found') {
+            commit('setIsEmailRegistered', true)
+          }
+          else if (err.code=='auth/wrong-password') {
+            commit('setIsPasswordCorrect', true)
+          }
+          
+
+
         });
     },
 

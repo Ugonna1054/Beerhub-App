@@ -1,9 +1,9 @@
 <template>
-    <mdb-container>
+    <mdb-container class="mdb-container">
         
         <i class="fas fa-angle-double-left mt-4 px-2 ml-3 text-white "></i>
-       <div class="btn bg-info text-white mb-3"  @click="clearDetails"><span class="font-weight-bold btnn px-3"> Back</span></div>
-    <mdb-row>
+        <div class="btn bg-info text-white mb-3"  @click="clearDetails"><span class="font-weight-bold btnn px-3"> Back</span></div>
+    <mdb-row class="">
         
         <mdb-col class="col-md-10 col-sm-12 col-6" >
 		<h4 class="text-center font-weight-bold mb-3">{{beerDetails.name}}</h4>
@@ -38,36 +38,42 @@
                             </tr>
                             <tr scope="row">
                                 <td>4</td>
+                                <td class="font-weight-bold">Description</td>
+                                <td>{{beerDetails.description}}</td>
+                               
+                            </tr>
+                            <tr scope="row">
+                                <td>5</td>
                                 <td class="font-weight-bold">First_brewed</td>
                                 <td>{{beerDetails.first_brewed}}</td>
                                
                             <tr scope="row">
-                                <td>5</td>
+                                <td>6</td>
                                 <td class="font-weight-bold">Image_url</td>
                                 <td>{{beerDetails.image_url}}</td>
                                
                             </tr>
                             <tr scope="row">
-                                <td>6</td>
+                                <td>7</td>
                                 <td class="font-weight-bold">Ph</td>
                                 <td>{{beerDetails.ph}}</td>
                                
                             </tr>
                         
                             <tr scope="row">
-                                <td>7</td>
+                                <td>8</td>
                                 <td class="font-weight-bold">Abv</td>
                                 <td>{{beerDetails.abv}}</td>
                                 
                             </tr>
                             <tr scope="row">
-                                <td>8</td>
+                                <td>9</td>
                                 <td class="font-weight-bold">Ibu</td>
                                 <td>{{beerDetails.ibu}}</td>
                                
                             </tr>
                             <tr scope="row">
-                                <td>9</td>
+                                <td>10</td>
                                 <td class="font-weight-bold">Ingredients</td>
                                 <td>
                                    <span class="font-weight-bold">Malt</span> 
@@ -92,19 +98,19 @@
                                
                             </tr>
                             <tr scope="row">
-                                <td>10</td>
+                            <td>11</td>
                                 <td class="font-weight-bold">Attenuation level</td>
                                 <td>{{beerDetails.attenuation_level}}</td>
                                
                             </tr>
                             <tr scope="row">
-                                <td>11</td>
+                                <td>12</td>
                                 <td class="font-weight-bold">Volume</td>
                                 <td>{{beerDetails.volume.value}} {{beerDetails.volume.unit}}</td>
                                
                             </tr>
                             <tr scope="row">
-                                <td>12</td>
+                                <td>13</td>
                                 <td class="font-weight-bold">Best taken with</td>
                                 <td>
                                      <ul  v-for="(item, index) in beerDetails.food_pairing" :key="index">
@@ -157,7 +163,6 @@ name:'details',
  },
  methods: {
      clearDetails () {
-         console.log('success back');
          this.$router.go(-1)
    } 
  }
@@ -180,6 +185,10 @@ name:'details',
 }
 .btnn{
     font-size:20px
+}
+
+.mdb-container {
+    max-width: 100%;
 }
 
 </style>

@@ -5,15 +5,16 @@
          
           <h1 class="font-weight-bold text-center ">Find Your Beer</h1>
           <div class="input-group md-form form-sm form- pl-0">
-              <input class="form-control border-primary my-0 py-1 red-border" @input ='toUpperCase' id='search' v-model='search'  type="text" placeholder="Search for Beer" aria-label="Search" />
+              <input class="form-control border-primary my-0 py-1 red-border" @input ='toUpperCase' id='search' v-model='search'  type="text" placeholder="Search for Beer by name or id...." aria-label="Search" />
               <div class="input-group-append">
                 <span class="input-group-text bg-primary lighten-3" id="basic-text1"><i class="fas fa-search text-white" aria-hidden="true"></i></span>
               </div>
           </div>
   
     </div>
-           <mdb-row v-if="loading">
-               Loading.......
+           <mdb-row v-if="loading" class="mb-3">
+               
+            <span class="font-weight-bold">Loading......</span>    <i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
            </mdb-row>
           
         <mdb-row v-else>
@@ -31,7 +32,7 @@
                     </div>
                     <mdb-card-body>
                             
-                            <mdb-card-text> <span class='font-weight-bold h6'>Description : {{item.description}} </span> </mdb-card-text>
+                            <mdb-card-text> <span class='font-weight-bold h6'>Description : {{text_truncate(item.description)}} </span> </mdb-card-text>
                             <div class="btn text-white bg-primary" @click="detailss(item)" >More Details</div>
                     </mdb-card-body>
                 </mdb-card>
@@ -93,14 +94,25 @@ methods :{
         }
     },
     addFavorite (item) {
-        this.$store.dispatch('addFavorites', item);
-        console.log('it works');
-             
+        this.$store.dispatch('addFavorites', item);        
     },
     detailss (item) {
-        console.log('details success');
-        this.$store.dispatch('beerDetails', item)
-        
+        this.$store.dispatch('beerDetails', item)    
+    },
+    text_truncate(str, length, ending) {
+        if(length==null) {
+            length=150;
+        }
+        if (ending==null) {
+            ending= '.......'
+        }
+        if(str.length>length) {
+            return str.substring(0, length) + ending
+        }
+        else {
+            return str
+        }
+
     }
 },
 

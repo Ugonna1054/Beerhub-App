@@ -21,7 +21,7 @@
             </mdb-row>
 
             <mdb-row>
-                <i class="fas fa-home mt-4 px-2 ml-3 text-white "></i>
+                <i class="fas fa-home mt-4 px-2 ml-3 text-white"></i>
                 <router-link class="btn bg-info text-white mb-3" to="/home"><span class="font-weight-bold px-3"> GO Home</span></router-link>
             </mdb-row>
             

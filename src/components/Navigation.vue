@@ -51,7 +51,7 @@ export default {
       userSignOut () {
         this.$store.dispatch('userSignOut')
       }
-    }
+    },
    
 }
 </script>

@@ -49,7 +49,7 @@ export default new Vuex.Store({
     async getBeerData ({ commit }) {
       try {
         let response = await fetch(
-          "https://api.punkapi.com/v2/beers?page=1&per_page=78"
+          "https://api.punkapi.com/v2/beers?page=1&per_page=39"
         );
         let data = await response.json();
         data.map(function(o) {
@@ -57,7 +57,6 @@ export default new Vuex.Store({
           return o;
         });
         console.log(data);
-
         commit("setBeers", data);
       } catch (err) {
         console.log(err);

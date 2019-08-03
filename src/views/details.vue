@@ -1,5 +1,5 @@
 <template>
-    <mdb-container class="mdb-container">
+    <mdb-container>
         
         <i class="fas fa-angle-double-left mt-4 px-2 ml-3 text-white "></i>
         <div class="btn bg-info text-white mb-3"  @click="clearDetails"><span class="font-weight-bold btnn px-3"> Back</span></div>
@@ -187,8 +187,6 @@ name:'details',
     font-size:20px
 }
 
-.mdb-container {
-    max-width: 100%;
-}
+
 
 </style>
